@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenApiSample", "OpenApiSam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SirenSample", "SirenSample\SirenSample.csproj", "{8171C8CB-2810-4120-B01F-F6B385CCCD39}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleTests", "SampleTests\SampleTests.csproj", "{59B211C8-3D99-4587-ACF0-FB5EAAD88793}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{8171C8CB-2810-4120-B01F-F6B385CCCD39}.Release|x64.Build.0 = Release|Any CPU
 		{8171C8CB-2810-4120-B01F-F6B385CCCD39}.Release|x86.ActiveCfg = Release|Any CPU
 		{8171C8CB-2810-4120-B01F-F6B385CCCD39}.Release|x86.Build.0 = Release|Any CPU
+		{59B211C8-3D99-4587-ACF0-FB5EAAD88793}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59B211C8-3D99-4587-ACF0-FB5EAAD88793}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59B211C8-3D99-4587-ACF0-FB5EAAD88793}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{59B211C8-3D99-4587-ACF0-FB5EAAD88793}.Debug|x64.Build.0 = Debug|Any CPU
+		{59B211C8-3D99-4587-ACF0-FB5EAAD88793}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{59B211C8-3D99-4587-ACF0-FB5EAAD88793}.Debug|x86.Build.0 = Debug|Any CPU
+		{59B211C8-3D99-4587-ACF0-FB5EAAD88793}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59B211C8-3D99-4587-ACF0-FB5EAAD88793}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59B211C8-3D99-4587-ACF0-FB5EAAD88793}.Release|x64.ActiveCfg = Release|Any CPU
+		{59B211C8-3D99-4587-ACF0-FB5EAAD88793}.Release|x64.Build.0 = Release|Any CPU
+		{59B211C8-3D99-4587-ACF0-FB5EAAD88793}.Release|x86.ActiveCfg = Release|Any CPU
+		{59B211C8-3D99-4587-ACF0-FB5EAAD88793}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

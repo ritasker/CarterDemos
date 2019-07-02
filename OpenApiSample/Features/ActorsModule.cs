@@ -10,7 +10,7 @@ namespace OpenApiSample.Features
 
     public class ActorsModule : CarterModule
     {
-        public ActorsModule(ActorProvider actorProvider) : base("/actors")
+        public ActorsModule(IActorProvider actorProvider) : base("/actors")
         {
             Get<GetActors>("", (req, res, routeData) =>
             {

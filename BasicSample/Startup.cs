@@ -9,7 +9,7 @@ namespace BasicSample
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<ActorProvider, ActorProvider>();
+            services.AddSingleton<IActorProvider, ActorProvider>();
             services.AddCarter();
         }
         

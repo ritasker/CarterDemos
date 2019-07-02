@@ -4,7 +4,7 @@ namespace BasicSample
     using Carter;
     using Microsoft.AspNetCore.Http;
 
-    /*public class NotFoundHandler : IStatusCodeHandler
+    public class NotFoundHandler : IStatusCodeHandler
     {
         public bool CanHandle(int statusCode)
         {
@@ -15,5 +15,5 @@ namespace BasicSample
         {
             return ctx.Response.WriteAsync($"No resource found at {ctx.Request.Path.Value}");
         }
-    }*/
+    }
 }

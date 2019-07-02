@@ -3,7 +3,7 @@ namespace OpenApiSample.Features
     using System.Collections.Generic;
     using System.Linq;
 
-    public class ActorProvider
+    public class ActorProvider : IActorProvider
     {
         private readonly Dictionary<int, Actor> actors;
 
@@ -46,5 +46,14 @@ namespace OpenApiSample.Features
 
             return actor;
         }
+    }
+    
+    public interface IActorProvider
+    {
+        IEnumerable<Actor> Get();
+        Actor Get(int id);
+        void Delete(int id);
+        void Update(Actor actor);
+        Actor Create(Actor actor);
     }
 }
