@@ -15,7 +15,7 @@ namespace OpenApiSample.Features
             Get<GetActors>("", (req, res, routeData) =>
             {
                 var people = actorProvider.Get();
-                return res.AsJson(people);
+                return res.Negotiate(people);
             });
 
             Get<GetActorsById>("{id:int}", (req, res, routeData) =>

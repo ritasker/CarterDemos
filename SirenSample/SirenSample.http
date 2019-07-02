@@ -1,0 +1,17 @@
+GET http://localhost:5000/actors
+
+###
+
+GET http://localhost:5000/actors
+Accept: application/vnd.siren+json
+
+###
+
+GET http://localhost:5000/actors/1
+
+###
+
+GET http://localhost:5000/actors/1
+Accept: application/vnd.siren+json
+
+###

@@ -1,4 +1,4 @@
-namespace BasicSample.Features
+namespace SirenSample.Features
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
