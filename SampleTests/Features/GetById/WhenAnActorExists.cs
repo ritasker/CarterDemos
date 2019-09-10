@@ -5,8 +5,8 @@ namespace SampleTests.Features.GetById
     using System.Net.Http;
     using System.Threading.Tasks;
     using AutoFixture;
-    using BasicSample.Features;
     using Carter;
+    using Demos.Features.Simple;
     using FakeItEasy;
     using FluentAssertions;
     using Microsoft.AspNetCore.Hosting;
@@ -28,7 +28,7 @@ namespace SampleTests.Features.GetById
             var client = new TestServer(new WebHostBuilder()
                 .ConfigureServices(s =>
                 {
-                    s.AddSingleton<IActorProvider>(actorProvider);
+                    s.AddSingleton(actorProvider);
                     s.AddCarter();
                 })
                 .Configure(app => { app.UseCarter(); })

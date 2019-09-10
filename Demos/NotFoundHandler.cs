@@ -1,4 +1,4 @@
-namespace BasicSample
+namespace Demos
 {
     using System.Threading.Tasks;
     using Carter;

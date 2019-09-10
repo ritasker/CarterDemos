@@ -1,8 +1,8 @@
-namespace OpenApiSample
+namespace Demos
 {
     using System.Collections.Generic;
     using Carter;
-    using Features;
+    using Features.Simple;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting.Server.Features;
     using Microsoft.Extensions.DependencyInjection;
@@ -12,11 +12,14 @@ namespace OpenApiSample
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IActorProvider, ActorProvider>();
+            services.AddScoped<IResponseNegotiator, XmlNegotiator>();
             services.AddCarter();
         }
-        
+
         public void Configure(IApplicationBuilder app)
         {
+            //app.UseCarter();
+            
             app.UseSwaggerUI(opt =>
             {
                 opt.RoutePrefix = "openapi/ui";

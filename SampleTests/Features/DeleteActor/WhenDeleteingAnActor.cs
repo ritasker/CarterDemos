@@ -2,7 +2,7 @@ namespace SampleTests.Features.DeleteActor
 {
     using System.Net;
     using System.Net.Http;
-    using BasicSample.Features;
+    using Demos.Features.Simple;
     using Carter;
     using FakeItEasy;
     using FluentAssertions;
@@ -23,7 +23,7 @@ namespace SampleTests.Features.DeleteActor
             var client = new TestServer(new WebHostBuilder()
                 .ConfigureServices(s =>
                 {
-                    s.AddSingleton<IActorProvider>(actorProvider);
+                    s.AddSingleton(actorProvider);
                     s.AddCarter();
                 })
                 .Configure(app => { app.UseCarter(); })

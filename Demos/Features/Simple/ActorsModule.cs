@@ -1,4 +1,4 @@
-namespace OpenApiSample.Features
+namespace Demos.Features.Simple
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
@@ -6,24 +6,23 @@ namespace OpenApiSample.Features
     using Carter.ModelBinding;
     using Carter.Request;
     using Carter.Response;
-    using OpenApi;
 
     public class ActorsModule : CarterModule
     {
         public ActorsModule(IActorProvider actorProvider) : base("/actors")
         {
-            Get<GetActors>("", (req, res, routeData) =>
+            Get("", (req, res, routeData) =>
             {
-                var people = actorProvider.Get();
-                return res.Negotiate(people);
+                var actors = actorProvider.Get();
+                return res.Negotiate(actors);
             });
 
-            Get<GetActorsById>("{id:int}", (req, res, routeData) =>
+            Get("{id:int}", (req, res, routeData) =>
             {
                 try
                 {
-                    var person = actorProvider.Get(routeData.As<int>("id"));
-                    return res.Negotiate(person);
+                    var actor = actorProvider.Get(routeData.As<int>("id"));
+                    return res.Negotiate(actor);
                 }
                 catch (KeyNotFoundException)
                 {
@@ -32,7 +31,7 @@ namespace OpenApiSample.Features
                 }
             });
             
-            Post<CreateActor>("", (req, res, routeData) =>
+            Post("", (req, res, routeData) =>
             {
                 var result = req.BindAndValidate<Actor>();
 
@@ -48,7 +47,7 @@ namespace OpenApiSample.Features
                 return res.Negotiate(actor);
             });
 
-            Put<UpdateActor>("{id:int}", (req, res, routeData) =>
+            Put("{id:int}", (req, res, routeData) =>
             {
                 var actor = req.Bind<Actor>();
                 actor.Id = routeData.As<int>("id");
@@ -66,7 +65,7 @@ namespace OpenApiSample.Features
                 return res.Negotiate(actor);
             });
 
-            Delete<DeleteActor>("{id:int}", (req, res, routeData) =>
+            Delete("{id:int}", (req, res, routeData) =>
             {
                 actorProvider.Delete(routeData.As<int>("id"));
                 res.StatusCode = 204;

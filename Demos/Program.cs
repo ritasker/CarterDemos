@@ -1,4 +1,4 @@
-namespace OpenApiSample
+namespace Demos
 {
     using System.IO;
     using Microsoft.AspNetCore.Hosting;

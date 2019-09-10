@@ -5,15 +5,13 @@ namespace SampleTests.Features.GetAllActors
     using System.Net.Http;
     using System.Threading.Tasks;
     using AutoFixture;
-    using BasicSample;
-    using BasicSample.Features;
+    using Demos.Features.Simple;
     using Carter;
     using FakeItEasy;
     using FluentAssertions;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.TestHost;
     using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.Extensions.DependencyInjection.Extensions;
     using Xunit;
 
     public class WhenActorsExist
@@ -30,7 +28,7 @@ namespace SampleTests.Features.GetAllActors
             var client = new TestServer(new WebHostBuilder()
                 .ConfigureServices(s =>
                 {
-                    s.AddSingleton<IActorProvider>(actorProvider);
+                    s.AddSingleton(actorProvider);
                     s.AddCarter();
                 })
                 .Configure(app => { app.UseCarter(); })

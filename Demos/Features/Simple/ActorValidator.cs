@@ -1,4 +1,4 @@
-namespace SirenSample.Features
+namespace Demos.Features.Simple
 {
     using FluentValidation;
 

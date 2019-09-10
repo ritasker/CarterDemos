@@ -1,4 +1,4 @@
-namespace BasicSample.Features
+namespace Demos.Features.Simple
 {
     public class Actor
     {
